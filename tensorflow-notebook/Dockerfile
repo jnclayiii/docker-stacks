@@ -10,3 +10,12 @@ RUN pip install --quiet --no-cache-dir \
     'tensorflow==2.2.0' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+
+# Install Tensorflow
+RUN pip install --quiet --no-cache-dir \
+    'bash_kernel' && \
+    fix-permissions "${CONDA_DIR}" && \
+    fix-permissions "/home/${NB_USER}"
+
+RUN python -m bash_kernel.install
