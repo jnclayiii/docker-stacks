@@ -12,7 +12,7 @@ RUN pip install --quiet --no-cache-dir \
     fix-permissions "/home/${NB_USER}"
 
 
-# Install Tensorflow
+# Install Bash
 RUN pip install --quiet --no-cache-dir \
     'bash_kernel' && \
     fix-permissions "${CONDA_DIR}" && \
